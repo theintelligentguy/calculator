@@ -1,0 +1,125 @@
+.App {
+  text-align: center;
+}
+body {
+  background: rgb(26, 91, 121);
+}
+* {
+  margin: 0;
+}
+.App-header {
+  display: flex;
+  justify-content: center;
+  font-size: 1.8rem;
+  color: white;
+  margin-top: 2rem;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.calculator__container {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  cursor: default;
+}
+
+.calculator__input {
+  grid-area: input;
+  border-radius: 1.1rem;
+}
+.calculator__output {
+  grid-area: output;
+  border-radius: 1.1rem;
+}
+.calculator__digits {
+  grid-area: left;
+  border-radius: 1.1rem;
+}
+.calculator__operators {
+  grid-area: right;
+  border-radius: 1.1rem;
+}
+
+.calculator {
+  display: grid;
+  grid-template-areas:
+    "input input"
+    "output output"
+    "left right";
+  gap: 0.5rem;
+  background: linear-gradient(#046879, #073744);
+  padding: 1rem;
+  border-radius: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.calculator > div {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  border-radius: 1.1rem;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+.grid-item,
+.calculator__operators > div {
+  background-color: rgb(81, 122, 135);
+  border: 1px solid #222;
+  padding: 15px;
+  text-align: center;
+  border: 1px solid rgb(13, 46, 94);
+  border-radius: 1.1rem;
+}
+
+.grid-item:hover {
+  transition: var(--transition);
+  background: rgba(0, 56, 140, 0.3);
+}
+
+.grid-item:active {
+  background: rgba(51, 115, 210, 0.9);
+}
+
+.calculator__operators {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  transition: var(--transition);
+  gap: 0.5rem;
+  padding: 1rem;
+}
+.calculator__operators > div:hover {
+  background: rgba(64, 224, 208, 0.5);
+}
+
+.calculator__operators > div {
+  background-color: rgb(48, 187, 173);
+}
+
+.calculator__operators > div:active {
+  background-color: rgb(11, 204, 184);
+}
+
+.calculator__input,
+.calculator__output {
+  color: #fff;
+  margin: 0.6rem;
+  padding: 10px 0;
+  min-height: 32px;
+  background-color: rgb(13, 46, 94);
+}
+
+@media screen and (max-width: 600px) {
+  .calculator > div {
+    font-size: 1rem;
+    padding: 0.3rem;
+  }
+}
